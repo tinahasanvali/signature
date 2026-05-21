@@ -1,0 +1,251 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     Gmail signature — Tina Hasanvali
+     Landscape ~600x230 (≈2.6:1) — standard Gmail signature shape
+     Base 16px, all sizes via em so a single font-size tweak rescales
+     everything proportionally.
+     ============================================================ */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .glow-wrap {
+    position: relative;
+    width: 420px;
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .card {
+    position: relative; z-index: 1;
+    background: #0b1929;
+    border-radius: 0.875em;
+    overflow: hidden;
+    border: 1px solid rgba(24,175,240,0.22);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 1.25em 3.75em rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .top-stripe {
+    height: 0.1875em;
+    background: linear-gradient(90deg, transparent 0%, #18aff0 15%, #5dd4f8 40%, #f5824b 65%, #f5a07a 75%, transparent 100%);
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.625em 1.25em;
+    background: rgba(24,175,240,0.06);
+    border-bottom: 1px solid rgba(24,175,240,0.15);
+  }
+  .logo-area { display: flex; align-items: center; gap: 0.625em; }
+  .logo-circle {
+    width: 2.25em; height: 2.25em;
+    border-radius: 50%; background: #ffffff;
+    border: 1.5px solid rgba(24,175,240,0.5);
+    box-shadow: 0 0 0 2px rgba(24,175,240,0.1), 0 0 0.5em rgba(24,175,240,0.25);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; flex-shrink: 0;
+  }
+  .logo-circle img { width: 1.5em; height: 1.5em; object-fit: contain; }
+  .company-text {
+    font-family: 'Jost', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.375em;
+    letter-spacing: 0.01em;
+    color: #18aff0;
+  }
+  .dept-pill {
+    background: rgba(245,130,75,0.12);
+    border: 1px solid rgba(245,130,75,0.45);
+    color: #f5824b;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.4em 0.85em;
+    border-radius: 1.5em;
+  }
+
+  /* ---------- Body — landscape row: photo | info ---------- */
+  .body {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.25em 1.5em;
+  }
+  .photo-wrapper {
+    position: relative;
+    width: 6.875em; height: 6.875em;
+    flex-shrink: 0;
+  }
+  .photo-wrapper::after {
+    content: '';
+    position: absolute; inset: -0.125em;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+    background: linear-gradient(135deg, #18aff0, #f5824b, #18aff0) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+  .photo-circle {
+    width: 6.875em; height: 6.875em;
+    border-radius: 50%; overflow: hidden;
+    border: 2px solid rgba(24,175,240,0.5);
+    box-shadow: 0 0 0 3px rgba(24,175,240,0.1), 0 0 1.125em rgba(24,175,240,0.2), 0 0.25em 1em rgba(0,0,0,0.5);
+    position: relative; z-index: 1;
+  }
+  .photo-circle img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
+    display: block;
+    transform: scale(1.08); transform-origin: top center;
+  }
+
+  .info { flex: 1; min-width: 0; }
+
+  .name {
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 1.625em;
+    font-weight: 600;
+    color: #edf4fb;
+    line-height: 1.15;
+    letter-spacing: 0.005em;
+    margin-bottom: 0.15em;
+  }
+  .title-line {
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #18aff0;
+    margin-bottom: 0.75em;
+  }
+
+  /* ---------- Separator ---------- */
+  .separator {
+    display: flex; align-items: center; gap: 0.5em;
+    margin-bottom: 0.75em; width: 100%;
+  }
+  .sep-line { flex: 1; height: 1px; background: rgba(24,175,240,0.22); }
+  .sep-dot { width: 0.3125em; height: 0.3125em; border-radius: 50%; background: #f5824b; flex-shrink: 0; }
+
+  /* ---------- Contacts ---------- */
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625em 1.25em;
+    width: 100%;
+  }
+  .c-row { display: flex; align-items: center; gap: 0.625em; min-width: 0; }
+  .c-icon {
+    width: 1.875em; height: 1.875em;
+    border-radius: 0.375em;
+    background: rgba(24,175,240,0.1);
+    border: 1px solid rgba(24,175,240,0.25);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .c-icon svg {
+    width: 0.875em; height: 0.875em;
+    stroke: #18aff0; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .c-info { display: flex; flex-direction: column; min-width: 0; }
+  .c-label {
+    font-size: 0.625em;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(24,175,240,0.65);
+    margin-bottom: 0.1em;
+  }
+  .c-text {
+    font-size: 1em;
+    color: rgba(210,230,245,0.92);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .c-text a { color: rgba(210,230,245,0.92); text-decoration: none; }
+  .c-text a:hover { color: #18aff0; }
+  .c-row.full { grid-column: 1 / -1; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    border-top: 1px solid rgba(24,175,240,0.12);
+    padding: 0.6em 1.25em;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-link {
+    font-size: 0.8125em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(24,175,240,0.7);
+    text-decoration: none;
+  }
+  .footer-link:hover { color: #18aff0; }
+  .footer-dots { display: flex; gap: 0.3125em; align-items: center; }
+  .fd { width: 0.3125em; height: 0.3125em; border-radius: 50%; background: rgba(24,175,240,0.25); }
+  .fd.orange { background: rgba(245,130,75,0.5); }
+  .bottom-stripe {
+    height: 0.1875em;
+    background: linear-gradient(90deg, transparent 0%, #18aff0 25%, #5dd4f8 50%, #f5824b 75%, transparent 100%);
+  }
+</style>
+
+<div class="glow-wrap">
+  <div class="card">
+    <div class="top-stripe"></div>
+    <div class="header">
+      <div class="logo-area">
+        <div class="logo-circle">
+          <img src="abrnoc-compressed.png" alt="abrNOC Logo">
+        </div>
+        <span class="company-text">abrNOC</span>
+      </div>
+      <span class="dept-pill">Human Resources</span>
+    </div>
+    <div class="body">
+      <div class="photo-wrapper">
+        <div class="photo-circle" id="photo-circle">
+          <img src="tina-compressed.png" alt="Tina Hasanvali">
+        </div>
+      </div>
+      <div class="info">
+      <div class="name">Tina Hasanvali</div>
+      <div class="title-line">Office Manager</div>
+      <div class="separator">
+        <div class="sep-line"></div><div class="sep-dot"></div><div class="sep-line"></div>
+      </div>
+      <div class="contacts">
+        <div class="c-row">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="c-info">
+            <span class="c-label">Phone</span>
+            <span class="c-text">09128939678</span>
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div class="c-info">
+            <span class="c-label">Website</span>
+            <span class="c-text"><a href="https://www.abrnoc.com" target="_blank">www.abrnoc.com</a></span>
+          </div>
+        </div>
+        <div class="c-row full">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="c-info">
+            <span class="c-label">Email</span>
+            <span class="c-text"><a href="/cdn-cgi/l/email-protection#4a3e23242b64222b392b243c2b26230a2b283824252964292527"><span class="__cf_email__" data-cfemail="3a4e53545b14525b495b544c5b56537a5b584854555914595557">[email&#160;protected]</span></a></span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://www.abrnoc.com" target="_blank" class="footer-link">abrNOC Company</a>
+      <div class="footer-dots">
+        <div class="fd"></div><div class="fd orange"></div><div class="fd"></div>
+      </div>
+    </div>
+    <div class="bottom-stripe"></div>
+  </div>
+</div>
