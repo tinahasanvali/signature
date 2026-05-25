@@ -43,7 +43,6 @@
   }
   button:hover { opacity: 0.85; }
   button.secondary { background: rgba(245,130,75,0.15); color: #f5824b; border: 1px solid rgba(245,130,75,0.4); }
-  button.copy-btn { background: rgba(24,175,240,0.12); color: #18aff0; border: 1px solid rgba(24,175,240,0.4); }
   .copy-msg { font-size: 0.8rem; color: #5dd4f8; opacity: 0; transition: opacity 0.3s; margin-left: 0.5rem; }
   .copy-msg.show { opacity: 1; }
   .divider { grid-column: 1 / -1; height: 1px; background: rgba(24,175,240,0.15); margin: 0.5rem 0; }
@@ -110,8 +109,8 @@
   </div>
 
   <div class="actions">
-    <button onclick="copyToClipboard()">&#128203; Copy to Clipboard</button>
-    <button onclick="generateAndDownload()">&#11015; Download sign.html</button>
+    <button onclick="previewAndCopy()">Preview &amp; Copy to Clipboard</button>
+    <button class="secondary" onclick="generateAndDownload()">&#11015; Download sign.html</button>
     <span class="copy-msg" id="copyMsg">Copied! Paste into Gmail signature settings.</span>
   </div>
 
@@ -337,10 +336,11 @@ function generateAndDownload() {
   URL.revokeObjectURL(a.href);
 }
 
-function copyToClipboard() {
+function previewAndCopy() {
   var v = getValues();
   if (!v.fullName) { alert('Please enter a name.'); return; }
   var html = buildSignature(v);
+  document.getElementById('preview-frame').innerHTML = html;
 
   /* Copy as rich HTML so it pastes formatted into Gmail signature editor */
   var blob = new Blob([html], { type: 'text/html' });
