@@ -13,144 +13,43 @@
     min-height: 100vh;
     padding: 2rem;
   }
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #18aff0;
-    margin-bottom: 0.3rem;
-  }
-  .subtitle {
-    font-size: 0.85rem;
-    color: rgba(200,221,240,0.5);
-    margin-bottom: 2rem;
-  }
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 1.8rem; font-weight: 600; color: #18aff0; margin-bottom: 0.3rem; }
+  .subtitle { font-size: 0.85rem; color: rgba(200,221,240,0.5); margin-bottom: 2rem; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
   .form-group.full { grid-column: 1 / -1; }
-  label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(24,175,240,0.65);
-  }
+  label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(24,175,240,0.65); }
   input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
-    background: rgba(24,175,240,0.06);
-    border: 1px solid rgba(24,175,240,0.22);
-    border-radius: 0.5rem;
-    padding: 0.6rem 0.8rem;
-    color: #edf4fb;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.2s;
+    background: rgba(24,175,240,0.06); border: 1px solid rgba(24,175,240,0.22); border-radius: 0.5rem;
+    padding: 0.6rem 0.8rem; color: #edf4fb; font-family: Arial, Helvetica, sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s;
   }
-  input:focus {
-    border-color: rgba(24,175,240,0.6);
-  }
+  input:focus { border-color: rgba(24,175,240,0.6); }
   .file-upload {
-    position: relative;
-    background: rgba(24,175,240,0.06);
-    border: 1.5px dashed rgba(24,175,240,0.3);
-    border-radius: 0.5rem;
-    padding: 1.2rem;
-    text-align: center;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
+    position: relative; background: rgba(24,175,240,0.06); border: 1.5px dashed rgba(24,175,240,0.3);
+    border-radius: 0.5rem; padding: 1.2rem; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s;
   }
-  .file-upload:hover {
-    border-color: rgba(24,175,240,0.55);
-    background: rgba(24,175,240,0.1);
-  }
-  .file-upload.has-file {
-    border-color: rgba(245,130,75,0.5);
-    background: rgba(245,130,75,0.06);
-  }
-  .file-upload input[type="file"] {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .file-upload .file-label {
-    font-size: 0.85rem;
-    color: rgba(24,175,240,0.7);
-    pointer-events: none;
-  }
-  .file-upload .file-name {
-    font-size: 0.75rem;
-    color: #f5824b;
-    margin-top: 0.3rem;
-    pointer-events: none;
-  }
-  .file-preview {
-    margin-top: 0.5rem;
-    pointer-events: none;
-  }
-  .file-preview img {
-    max-height: 50px;
-    border-radius: 0.3rem;
-    border: 1px solid rgba(24,175,240,0.2);
-  }
-  .actions {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-  }
+  .file-upload:hover { border-color: rgba(24,175,240,0.55); background: rgba(24,175,240,0.1); }
+  .file-upload.has-file { border-color: rgba(245,130,75,0.5); background: rgba(245,130,75,0.06); }
+  .file-upload input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .file-upload .file-label { font-size: 0.85rem; color: rgba(24,175,240,0.7); pointer-events: none; }
+  .file-upload .file-name { font-size: 0.75rem; color: #f5824b; margin-top: 0.3rem; pointer-events: none; }
+  .file-preview { margin-top: 0.5rem; pointer-events: none; }
+  .file-preview img { max-height: 50px; border-radius: 0.3rem; border: 1px solid rgba(24,175,240,0.2); }
+  .actions { margin-top: 2rem; display: flex; gap: 1rem; align-items: center; }
   button {
-    background: linear-gradient(135deg, #18aff0, #1498d4);
-    color: #fff;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.7rem 1.8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.2s;
+    background: linear-gradient(135deg, #18aff0, #1498d4); color: #fff; border: none; border-radius: 0.5rem;
+    padding: 0.7rem 1.8rem; font-family: Arial, Helvetica, sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s;
   }
   button:hover { opacity: 0.85; }
-  button.secondary {
-    background: rgba(245,130,75,0.15);
-    color: #f5824b;
-    border: 1px solid rgba(245,130,75,0.4);
-  }
-  .divider {
-    grid-column: 1 / -1;
-    height: 1px;
-    background: rgba(24,175,240,0.15);
-    margin: 0.5rem 0;
-  }
-
-  .preview-section {
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(24,175,240,0.15);
-  }
-  .preview-section h2 {
-    font-size: 1.1rem;
-    color: #18aff0;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  #preview-frame {
-    background: #0b1929;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    border: 1px solid rgba(24,175,240,0.15);
-  }
+  button.secondary { background: rgba(245,130,75,0.15); color: #f5824b; border: 1px solid rgba(245,130,75,0.4); }
+  button.copy-btn { background: rgba(24,175,240,0.12); color: #18aff0; border: 1px solid rgba(24,175,240,0.4); }
+  .copy-msg { font-size: 0.8rem; color: #5dd4f8; opacity: 0; transition: opacity 0.3s; margin-left: 0.5rem; }
+  .copy-msg.show { opacity: 1; }
+  .divider { grid-column: 1 / -1; height: 1px; background: rgba(24,175,240,0.15); margin: 0.5rem 0; }
+  .preview-section { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(24,175,240,0.15); }
+  .preview-section h2 { font-size: 1.1rem; color: #18aff0; margin-bottom: 1rem; font-weight: 500; }
+  #preview-frame { background: #0b1929; border-radius: 0.75rem; padding: 1.5rem; border: 1px solid rgba(24,175,240,0.15); }
 </style>
 </head>
 <body>
@@ -211,8 +110,9 @@
   </div>
 
   <div class="actions">
-    <button onclick="generateAndDownload()">Generate &amp; Download sign.html</button>
-    <button class="secondary" onclick="updatePreview()">Preview</button>
+    <button onclick="copyToClipboard()">&#128203; Copy to Clipboard</button>
+    <button onclick="generateAndDownload()">&#11015; Download sign.html</button>
+    <span class="copy-msg" id="copyMsg">Copied! Paste into Gmail signature settings.</span>
   </div>
 
   <div class="preview-section">
@@ -225,12 +125,8 @@
 var logoBase64 = '';
 var avatarBase64 = '';
 
-document.getElementById('logoFile').addEventListener('change', function(e) {
-  handleFile(e.target.files[0], 'logo');
-});
-document.getElementById('avatarFile').addEventListener('change', function(e) {
-  handleFile(e.target.files[0], 'avatar');
-});
+document.getElementById('logoFile').addEventListener('change', function(e) { handleFile(e.target.files[0], 'logo'); });
+document.getElementById('avatarFile').addEventListener('change', function(e) { handleFile(e.target.files[0], 'avatar'); });
 
 function handleFile(file, type) {
   if (!file) return;
@@ -248,6 +144,7 @@ function handleFile(file, type) {
       document.getElementById('avatarPreview').innerHTML = '<img src="' + b64 + '">';
       document.getElementById('avatarDrop').classList.add('has-file');
     }
+    updatePreview();
   };
   reader.readAsDataURL(file);
 }
@@ -256,9 +153,7 @@ function getValues() {
   var websiteRaw = document.getElementById('website').value.trim();
   var websiteDisplay = websiteRaw.replace(/^https?:\/\//, '');
   var websiteHref = websiteRaw;
-  if (websiteHref && !/^https?:\/\//.test(websiteHref)) {
-    websiteHref = 'https://' + websiteHref;
-  }
+  if (websiteHref && !/^https?:\/\//.test(websiteHref)) websiteHref = 'https://' + websiteHref;
   return {
     fullName: document.getElementById('fullName').value.trim(),
     jobTitle: document.getElementById('jobTitle').value.trim(),
@@ -273,72 +168,6 @@ function getValues() {
   };
 }
 
-function buildSignature(v) {
-  var F = "font-family:Arial,Helvetica,sans-serif;";
-  return '<div style="position:relative;width:420px;' + F + 'font-size:11px;line-height:1.4;margin:0;padding:0;">\n' +
-'  <div style="position:relative;z-index:1;background:#0b1929;border-radius:0.875em;overflow:hidden;border:1px solid rgba(24,175,240,0.22);box-shadow:0 0 0 1px rgba(255,255,255,0.04),0 1.25em 3.75em rgba(0,0,0,0.7),inset 0 1px 0 rgba(255,255,255,0.06);">\n' +
-'    <div style="height:0.1875em;background:linear-gradient(90deg,transparent 0%,#18aff0 15%,#5dd4f8 40%,#f5824b 65%,#f5a07a 75%,transparent 100%);"></div>\n' +
-'    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625em 1.25em;background:rgba(24,175,240,0.06);border-bottom:1px solid rgba(24,175,240,0.15);">\n' +
-'      <div style="display:flex;align-items:center;gap:0.625em;">\n' +
-'        <div style="width:2.25em;height:2.25em;border-radius:50%;background:#ffffff;border:1.5px solid rgba(24,175,240,0.5);box-shadow:0 0 0 2px rgba(24,175,240,0.1),0 0 0.5em rgba(24,175,240,0.25);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;">\n' +
-'          <img src="' + esc(v.logo) + '" alt="' + esc(v.companyName) + ' Logo" style="width:1.5em;height:1.5em;object-fit:contain;">\n' +
-'        </div>\n' +
-'        <span style="' + F + 'font-weight:600;font-size:1.375em;letter-spacing:0.01em;color:#18aff0;">' + esc(v.companyName) + '</span>\n' +
-'      </div>\n' +
-'      <span style="background:rgba(245,130,75,0.12);border:1px solid rgba(245,130,75,0.45);color:#f5824b;font-size:0.75em;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;padding:0.4em 0.85em;border-radius:1.5em;">' + esc(v.department) + '</span>\n' +
-'    </div>\n' +
-'    <div style="display:flex;align-items:center;gap:1.5em;padding:1.25em 1.5em;">\n' +
-'      <div style="position:relative;width:6.875em;height:6.875em;flex-shrink:0;">\n' +
-'        <div style="width:6.875em;height:6.875em;border-radius:50%;overflow:hidden;border:2px solid rgba(24,175,240,0.5);box-shadow:0 0 0 3px rgba(24,175,240,0.1),0 0 1.125em rgba(24,175,240,0.2),0 0.25em 1em rgba(0,0,0,0.5);position:relative;z-index:1;">\n' +
-'          <img src="' + esc(v.avatar) + '" alt="' + esc(v.fullName) + '" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transform:scale(1.08);transform-origin:top center;">\n' +
-'        </div>\n' +
-'      </div>\n' +
-'      <div style="flex:1;min-width:0;">\n' +
-'        <div style="' + F + 'font-size:1.625em;font-weight:600;color:#edf4fb;line-height:1.15;letter-spacing:0.005em;margin-bottom:0.15em;">' + esc(v.fullName) + '</div>\n' +
-'        <div style="font-size:0.75em;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#18aff0;margin-bottom:0.75em;">' + esc(v.jobTitle) + '</div>\n' +
-'        <div style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.75em;width:100%;">\n' +
-'          <div style="flex:1;height:1px;background:rgba(24,175,240,0.22);"></div>\n' +
-'          <div style="width:0.3125em;height:0.3125em;border-radius:50%;background:#f5824b;flex-shrink:0;"></div>\n' +
-'          <div style="flex:1;height:1px;background:rgba(24,175,240,0.22);"></div>\n' +
-'        </div>\n' +
-'        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.625em 1.25em;width:100%;">\n' +
-'          <div style="display:flex;align-items:center;gap:0.625em;min-width:0;">\n' +
-'            <div style="width:1.875em;height:1.875em;border-radius:0.375em;background:rgba(24,175,240,0.1);border:1px solid rgba(24,175,240,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" style="width:0.875em;height:0.875em;stroke:#18aff0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>\n' +
-'            <div style="display:flex;flex-direction:column;min-width:0;">\n' +
-'              <span style="font-size:0.625em;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(24,175,240,0.65);margin-bottom:0.1em;">Phone</span>\n' +
-'              <span style="font-size:1em;color:rgba(210,230,245,0.92);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + esc(v.phone) + '</span>\n' +
-'            </div>\n' +
-'          </div>\n' +
-'          <div style="display:flex;align-items:center;gap:0.625em;min-width:0;">\n' +
-'            <div style="width:1.875em;height:1.875em;border-radius:0.375em;background:rgba(24,175,240,0.1);border:1px solid rgba(24,175,240,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" style="width:0.875em;height:0.875em;stroke:#18aff0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>\n' +
-'            <div style="display:flex;flex-direction:column;min-width:0;">\n' +
-'              <span style="font-size:0.625em;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(24,175,240,0.65);margin-bottom:0.1em;">Website</span>\n' +
-'              <span style="font-size:1em;color:rgba(210,230,245,0.92);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><a href="' + esc(v.websiteHref) + '" target="_blank" style="color:rgba(210,230,245,0.92);text-decoration:none;">' + esc(v.websiteDisplay) + '</a></span>\n' +
-'            </div>\n' +
-'          </div>\n' +
-'          <div style="display:flex;align-items:center;gap:0.625em;min-width:0;grid-column:1/-1;">\n' +
-'            <div style="width:1.875em;height:1.875em;border-radius:0.375em;background:rgba(24,175,240,0.1);border:1px solid rgba(24,175,240,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" style="width:0.875em;height:0.875em;stroke:#18aff0;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>\n' +
-'            <div style="display:flex;flex-direction:column;min-width:0;">\n' +
-'              <span style="font-size:0.625em;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(24,175,240,0.65);margin-bottom:0.1em;">Email</span>\n' +
-'              <span style="font-size:1em;color:rgba(210,230,245,0.92);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><a href="mailto:' + esc(v.email) + '" style="color:rgba(210,230,245,0.92);text-decoration:none;">' + esc(v.email) + '</a></span>\n' +
-'            </div>\n' +
-'          </div>\n' +
-'        </div>\n' +
-'      </div>\n' +
-'    </div>\n' +
-'    <div style="border-top:1px solid rgba(24,175,240,0.12);padding:0.6em 1.25em;display:flex;align-items:center;justify-content:space-between;">\n' +
-'      <a href="' + esc(v.websiteHref) + '" target="_blank" style="font-size:0.8125em;font-weight:500;letter-spacing:0.02em;color:rgba(24,175,240,0.7);text-decoration:none;">' + esc(v.companyName) + ' Company</a>\n' +
-'      <div style="display:flex;gap:0.3125em;align-items:center;">\n' +
-'        <div style="width:0.3125em;height:0.3125em;border-radius:50%;background:rgba(24,175,240,0.25);"></div>\n' +
-'        <div style="width:0.3125em;height:0.3125em;border-radius:50%;background:rgba(245,130,75,0.5);"></div>\n' +
-'        <div style="width:0.3125em;height:0.3125em;border-radius:50%;background:rgba(24,175,240,0.25);"></div>\n' +
-'      </div>\n' +
-'    </div>\n' +
-'    <div style="height:0.1875em;background:linear-gradient(90deg,transparent 0%,#18aff0 25%,#5dd4f8 50%,#f5824b 75%,transparent 100%);"></div>\n' +
-'  </div>\n' +
-'</div>';
-}
-
 function esc(str) {
   if (!str) return '';
   var div = document.createElement('div');
@@ -346,10 +175,152 @@ function esc(str) {
   return div.innerHTML;
 }
 
+function buildSignature(v) {
+  /* Email-safe: tables only, inline styles, no flex/grid/svg/gradient/box-shadow */
+  var e = esc;
+  var F = 'font-family:Arial,Helvetica,sans-serif;';
+
+  return '' +
+'<table cellpadding="0" cellspacing="0" border="0" width="420" style="' + F + 'font-size:11px;line-height:1.4;border-collapse:collapse;background:#0b1929;border:1px solid #1a3a5c;border-radius:10px;overflow:hidden;">' +
+
+  /* ── Top stripe (4 colored cells) ── */
+  '<tr>' +
+    '<td colspan="2" style="padding:0;font-size:0;line-height:0;">' +
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">' +
+        '<tr>' +
+          '<td width="20%" style="height:3px;background:#18aff0;"></td>' +
+          '<td width="30%" style="height:3px;background:#5dd4f8;"></td>' +
+          '<td width="30%" style="height:3px;background:#f5824b;"></td>' +
+          '<td width="20%" style="height:3px;background:#f5a07a;"></td>' +
+        '</tr>' +
+      '</table>' +
+    '</td>' +
+  '</tr>' +
+
+  /* ── Header: logo + company | department ── */
+  '<tr>' +
+    '<td colspan="2" style="padding:7px 14px;background:#0d1f33;border-bottom:1px solid #163050;">' +
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">' +
+        '<tr>' +
+          '<td style="vertical-align:middle;">' +
+            '<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr>' +
+              '<td style="vertical-align:middle;padding-right:7px;">' +
+                '<img src="' + e(v.logo) + '" alt="' + e(v.companyName) + '" width="22" height="22" style="display:block;border-radius:50%;border:1px solid #3399cc;background:#ffffff;">' +
+              '</td>' +
+              '<td style="vertical-align:middle;' + F + 'font-weight:bold;font-size:15px;letter-spacing:0.3px;color:#18aff0;">' + e(v.companyName) + '</td>' +
+            '</tr></table>' +
+          '</td>' +
+          '<td style="vertical-align:middle;text-align:right;">' +
+            '<span style="background:#2a1a12;border:1px solid #c06030;color:#f5824b;font-size:9px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:12px;display:inline-block;">' + e(v.department) + '</span>' +
+          '</td>' +
+        '</tr>' +
+      '</table>' +
+    '</td>' +
+  '</tr>' +
+
+  /* ── Body: photo | info ── */
+  '<tr>' +
+    '<td style="vertical-align:top;padding:14px 0 14px 16px;width:85px;">' +
+      '<img src="' + e(v.avatar) + '" alt="' + e(v.fullName) + '" width="75" height="75" style="display:block;border-radius:50%;border:2px solid #3399cc;object-fit:cover;">' +
+    '</td>' +
+    '<td style="vertical-align:top;padding:14px 16px 14px 12px;">' +
+
+      /* Name */
+      '<div style="' + F + 'font-size:18px;font-weight:bold;color:#edf4fb;line-height:1.2;margin:0 0 2px 0;">' + e(v.fullName) + '</div>' +
+
+      /* Title */
+      '<div style="font-size:9px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:#18aff0;margin:0 0 8px 0;">' + e(v.jobTitle) + '</div>' +
+
+      /* Separator */
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;margin:0 0 8px 0;"><tr>' +
+        '<td style="height:1px;background:#1a3a5c;"></td>' +
+        '<td width="5" style="padding:0 4px;"><div style="width:4px;height:4px;border-radius:50%;background:#f5824b;"></div></td>' +
+        '<td style="height:1px;background:#1a3a5c;"></td>' +
+      '</tr></table>' +
+
+      /* Contacts table */
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">' +
+        '<tr>' +
+          /* Phone */
+          '<td style="vertical-align:top;padding:0 8px 6px 0;width:50%;">' +
+            '<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr>' +
+              '<td style="vertical-align:middle;padding-right:6px;">' +
+                '<div style="width:20px;height:20px;border-radius:4px;background:#0d2640;border:1px solid #1a3a5c;text-align:center;line-height:20px;font-size:11px;color:#18aff0;">&#9742;</div>' +
+              '</td>' +
+              '<td style="vertical-align:middle;">' +
+                '<div style="font-size:7px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#2a7ab5;margin:0 0 1px 0;">Phone</div>' +
+                '<div style="font-size:11px;color:#d2e6f5;">' + e(v.phone) + '</div>' +
+              '</td>' +
+            '</tr></table>' +
+          '</td>' +
+          /* Website */
+          '<td style="vertical-align:top;padding:0 0 6px 0;width:50%;">' +
+            '<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr>' +
+              '<td style="vertical-align:middle;padding-right:6px;">' +
+                '<div style="width:20px;height:20px;border-radius:4px;background:#0d2640;border:1px solid #1a3a5c;text-align:center;line-height:20px;font-size:11px;color:#18aff0;">&#127760;</div>' +
+              '</td>' +
+              '<td style="vertical-align:middle;">' +
+                '<div style="font-size:7px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#2a7ab5;margin:0 0 1px 0;">Website</div>' +
+                '<div style="font-size:11px;"><a href="' + e(v.websiteHref) + '" target="_blank" style="color:#d2e6f5;text-decoration:none;">' + e(v.websiteDisplay) + '</a></div>' +
+              '</td>' +
+            '</tr></table>' +
+          '</td>' +
+        '</tr>' +
+        '<tr>' +
+          /* Email – full width */
+          '<td colspan="2" style="vertical-align:top;padding:0;">' +
+            '<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr>' +
+              '<td style="vertical-align:middle;padding-right:6px;">' +
+                '<div style="width:20px;height:20px;border-radius:4px;background:#0d2640;border:1px solid #1a3a5c;text-align:center;line-height:20px;font-size:11px;color:#18aff0;">&#9993;</div>' +
+              '</td>' +
+              '<td style="vertical-align:middle;">' +
+                '<div style="font-size:7px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#2a7ab5;margin:0 0 1px 0;">Email</div>' +
+                '<div style="font-size:11px;"><a href="mailto:' + e(v.email) + '" style="color:#d2e6f5;text-decoration:none;">' + e(v.email) + '</a></div>' +
+              '</td>' +
+            '</tr></table>' +
+          '</td>' +
+        '</tr>' +
+      '</table>' +
+
+    '</td>' +
+  '</tr>' +
+
+  /* ── Footer ── */
+  '<tr>' +
+    '<td colspan="2" style="padding:6px 14px;border-top:1px solid #132a42;">' +
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;"><tr>' +
+        '<td style="vertical-align:middle;">' +
+          '<a href="' + e(v.websiteHref) + '" target="_blank" style="font-size:10px;font-weight:500;letter-spacing:0.3px;color:#2a7ab5;text-decoration:none;">' + e(v.companyName) + ' Company</a>' +
+        '</td>' +
+        '<td style="vertical-align:middle;text-align:right;">' +
+          '<span style="display:inline-block;width:4px;height:4px;border-radius:50%;background:#1a3a5c;margin:0 1px;"></span>' +
+          '<span style="display:inline-block;width:4px;height:4px;border-radius:50%;background:#c06030;margin:0 1px;"></span>' +
+          '<span style="display:inline-block;width:4px;height:4px;border-radius:50%;background:#1a3a5c;margin:0 1px;"></span>' +
+        '</td>' +
+      '</tr></table>' +
+    '</td>' +
+  '</tr>' +
+
+  /* ── Bottom stripe ── */
+  '<tr>' +
+    '<td colspan="2" style="padding:0;font-size:0;line-height:0;">' +
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">' +
+        '<tr>' +
+          '<td width="25%" style="height:3px;background:#18aff0;"></td>' +
+          '<td width="25%" style="height:3px;background:#5dd4f8;"></td>' +
+          '<td width="25%" style="height:3px;background:#f5824b;"></td>' +
+          '<td width="25%" style="height:3px;background:#f5a07a;"></td>' +
+        '</tr>' +
+      '</table>' +
+    '</td>' +
+  '</tr>' +
+
+'</table>';
+}
+
 function updatePreview() {
   var v = getValues();
-  var html = buildSignature(v);
-  document.getElementById('preview-frame').innerHTML = html;
+  document.getElementById('preview-frame').innerHTML = buildSignature(v);
 }
 
 function generateAndDownload() {
@@ -364,6 +335,39 @@ function generateAndDownload() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(a.href);
+}
+
+function copyToClipboard() {
+  var v = getValues();
+  if (!v.fullName) { alert('Please enter a name.'); return; }
+  var html = buildSignature(v);
+
+  /* Copy as rich HTML so it pastes formatted into Gmail signature editor */
+  var blob = new Blob([html], { type: 'text/html' });
+  var item = new ClipboardItem({ 'text/html': blob, 'text/plain': new Blob([html], { type: 'text/plain' }) });
+  navigator.clipboard.write([item]).then(function() {
+    var msg = document.getElementById('copyMsg');
+    msg.classList.add('show');
+    setTimeout(function() { msg.classList.remove('show'); }, 3000);
+  }).catch(function() {
+    /* Fallback: select rendered HTML and copy */
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    tmp.style.position = 'fixed';
+    tmp.style.left = '-9999px';
+    document.body.appendChild(tmp);
+    var range = document.createRange();
+    range.selectNodeContents(tmp);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    sel.removeAllRanges();
+    document.body.removeChild(tmp);
+    var msg = document.getElementById('copyMsg');
+    msg.classList.add('show');
+    setTimeout(function() { msg.classList.remove('show'); }, 3000);
+  });
 }
 
 document.querySelectorAll('.form-grid input').forEach(function(el) {
